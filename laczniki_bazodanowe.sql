@@ -93,7 +93,6 @@ SELECT
     koszt,
     (przychod - koszt) AS zysk_strata
 FROM (
-    -- Siedziba
     SELECT
         k.kurs_id, r.nazwa, w.imie, w.nazwisko, r.cena * COUNT(u.umowa_id) AS przychod, w.stawka * r.godz AS koszt
     FROM kursySiedziba k
